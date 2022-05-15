@@ -5,23 +5,24 @@
 }
 body {
   margin: 0 auto;
-  padding: 0;
+  padding: 10% 0;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   background: #111111;
   max-width: 1280px;
+  min-height: 800px;
 }
 h2 {
   color: aliceblue;
   width: 50%;
-  font-size: 1em;
+  font-size: 1.5em;
 }
 
 .slider {
   width: 70%;
-  height: 70%;
+  height: 100%;
   border-radius: 5%;
   overflow: hidden;
 }
@@ -58,7 +59,7 @@ h2 {
 
 .manual-btn {
   border: 2px solid #40d3dc;
-  padding: 3%;
+  padding: 2%;
   border-radius: 50%;
   cursor: pointer;
   transition: 1s;
@@ -71,7 +72,9 @@ h2 {
 .manual-btn:hover {
   background: #40d3dc;
 }
-
+.manual-btn:focus:active {
+  background: #40d3dc;
+}
 #radio1:checked ~ .first {
   margin-left: 0;
 }
@@ -90,6 +93,7 @@ h2 {
   h2 {
     width: 100%;
     padding-top: 5em;
+    font-size: 1em;
   }
   .navigation-manual {
     margin-top: -8em;
@@ -101,6 +105,10 @@ h2 {
   }
   .manual-btn:not(:last-child) {
     margin-right: 1.5em;
+  }
+  body {
+    min-height: 600px;
+    max-width: 1280px;
   }
 }
 @media only screen and (max-width: 350px) {
